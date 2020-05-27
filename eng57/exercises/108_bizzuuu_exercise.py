@@ -16,17 +16,41 @@
 
     # if a multiple of 3 and 5 it return bizzzzuu
 
-def bizzbuzz(bizz, zzuu):
-    number = input('Please enter number: ')
+
+def bizzbuzz(num1, num2):
     for digit in range(1, (int(number) + 1)):
-        if digit%(bizz*zzuu) == 0 & zzuu%bizz == 0:
+        if digit % (num1*num2) == 0:
             print('bizzzzuu')
-        elif digit%zzuu == 0:
+        elif digit % num2 == 0:
             print('zzuu')
-        elif digit%bizz == 0:
+        elif digit % num1 == 0:
             print('bizz')
         else:
             print(digit)
+
+
+
+
+start = input('Are you ready to play BIZZBUZZ? (Y/N) ')
+while True:
+    if start.upper() == 'N':
+        print('Maybe next time...')
+        break
+
+    elif start.upper() == 'Y':
+        number = input('Please enter number: ')
+        if number == 'penpinapplespen':
+            break
+        bizz = int(input('Choose your BIZZ: '))
+        buzz = int(input('Choose your ZZUU: '))
+        bizzbuzz(bizz, buzz)
+
+    else:
+        print("It's a Yes or No question.")
+        start = input('Are you ready to play BIZZBUZZ? >>(Y/N)<< ')
+
+
+
 
 
 
@@ -38,4 +62,4 @@ def bizzbuzz(bizz, zzuu):
 
     #      make it so it can work with any number!
 
-bizzbuzz(2, 4)
+
