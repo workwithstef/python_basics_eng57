@@ -14,12 +14,20 @@
 
     # if a multiple of 5 it return zzuu
 
-    # if a multiple of 3 and 5 it return bizzzzuu
+# if a multiple of 3 and 5 it return bizzzzuu
+
+print(__name__)
+## __name__ is a special feature which allows us to track where files are called from
+## when called directly or "double-clicked on" (not imported), __name__ = __main__
+## when called from an import, __name__ = path.to.file.py
+## this concept is not used a lot but you can make cool demos
+if __name__ == '__main__':
+    print('I was called directly')
+
+
 def check_if_digit_div_num(digit, num_div):
-    if digit % num_div == 0:
-        return True
-    else:
-        return False
+    return digit % num_div == 0
+
 
 def bizzbuzz(num1, num2, number):
     for digit in range(1, (int(number) + 1)):
@@ -33,22 +41,18 @@ def bizzbuzz(num1, num2, number):
             print(digit)
 
 
-
-
 start = input('Are you ready to play BIZZBUZZ? (Y/N) ')
 while True:
-    if start.upper() == 'N':
+    if start.upper() == 'N' or start.upper() == 'NO':
         print('Maybe next time...')
         break
-
-    elif start.upper() == 'Y':
+    elif start.upper() == 'Y' or start.upper() == 'YES':
         number = input('Please enter number: ')
         if number == 'penpinapplespen':
             break
         bizz = int(input('Choose your BIZZ: '))
         buzz = int(input('Choose your ZZUU: '))
         bizzbuzz(bizz, buzz, number)
-
     else:
         print("It's a Yes or No question.")
         start = input('Are you ready to play BIZZBUZZ? >>(Y/N)<< ')
@@ -65,5 +69,4 @@ while True:
 #  make it so I can it so it can work with 4 and 9 insted of 3 and 5.
 
     #      make it so it can work with any number!
-
 
