@@ -15,15 +15,19 @@
     # if a multiple of 5 it return zzuu
 
     # if a multiple of 3 and 5 it return bizzzzuu
+def check_if_digit_div_num(digit, num_div):
+    if digit % num_div == 0:
+        return True
+    else:
+        return False
 
-
-def bizzbuzz(num1, num2):
+def bizzbuzz(num1, num2, number):
     for digit in range(1, (int(number) + 1)):
-        if digit % (num1*num2) == 0:
+        if check_if_digit_div_num(digit, num1) and check_if_digit_div_num(digit, num2):
             print('bizzzzuu')
-        elif digit % num2 == 0:
+        elif check_if_digit_div_num(digit, num2):
             print('zzuu')
-        elif digit % num1 == 0:
+        elif check_if_digit_div_num(digit, num1):
             print('bizz')
         else:
             print(digit)
@@ -43,7 +47,7 @@ while True:
             break
         bizz = int(input('Choose your BIZZ: '))
         buzz = int(input('Choose your ZZUU: '))
-        bizzbuzz(bizz, buzz)
+        bizzbuzz(bizz, buzz, number)
 
     else:
         print("It's a Yes or No question.")
