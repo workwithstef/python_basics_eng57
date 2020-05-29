@@ -8,10 +8,10 @@ class Dog:
 
 
 class Cat:
-    def __init__(self, age, type='Tiger', name='Melon'):
+    def __init__(self, age, breed='Tiger', name='Melon'):
         self.name = name
         self.age = age
-        self.type = type
+        self.breed = breed
         self.colour = 'white with black stripes... or is it black with white stripes..?'
         self.best_friend = 'Stefan'
 
@@ -27,6 +27,6 @@ class Cat:
     def food(self):
         return 'salmon'
 
-    def introduce_yourself(self, name, type):
+    def introduce_yourself(self, name, breed):
         pass
 
