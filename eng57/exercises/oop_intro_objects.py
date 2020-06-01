@@ -1,4 +1,4 @@
-from eng57.exercises.oop_intro_classes import *
+from eng57.exercises.oop_intro_classes import Cat
 
 my_cat = Cat(3)
 print(my_cat.species)
