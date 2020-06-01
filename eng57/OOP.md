@@ -22,6 +22,11 @@
 - The ability to adopt methods and attributes from a previously made 'parent' class.
 - super().method() prevents sub-class from completely overriding method. Instead 'includes' parent method's features
 ```
+class Animal:
+    def __init__(self, species='', limbs=4, natural_habitat=''):
+```
+
+```
 class Cat(Animal):
     def __init__(self, age, breed='Tiger', name='Melon'):
         super().__init__('Mammal', 4, 'Indian Rainforest')
