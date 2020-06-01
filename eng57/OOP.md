@@ -21,6 +21,12 @@
 #### Inheritance
 - The ability to adopt methods and attributes from a previously made 'parent' class.
 - super().method() prevents sub-class from completely overriding method. Instead 'includes' parent method's features
+```
+class Cat(Animal):
+    def __init__(self, age, breed='Tiger', name='Melon'):
+        super().__init__('Mammal', 4, 'Indian Rainforest')
+       
+```
 
 #### Encapsulation
 - making attributes/methods no longer accessible externally, using underscore. Made accessible internally using 'getter' method
