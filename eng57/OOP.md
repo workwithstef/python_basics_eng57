@@ -16,7 +16,16 @@
 
 #### Polymorphism
 - the ability to redefine and override parent class methods
-
+```
+class Animal:
+    def sleep(self):
+        return 'zzzZZZZZZZzZZZzzz'
+```
+```
+class Cat(Animal):
+    def sleep(self):
+        return "You aint gotta tell me twice-- zzzzZZZzz"
+```
 
 #### Inheritance
 - The ability to adopt methods and attributes from a previously made 'parent' class.
@@ -36,7 +45,16 @@ class Cat(Animal):
 #### Encapsulation
 - making attributes/methods no longer accessible externally, using underscore. Made accessible internally using 'getter' method
 - usually encapsulate attributes which should not be easily changed i.e. age/name/national ID/etc
-
+```
+class Cat(Animal):
+    def __init__(self, age, breed='Tiger', name='Melon'):
+        self.__name = name
+        self.__age = age
+```
+```
+    def getter_name(self):
+        return self.__name
+```
 
 
 ### Key Words
